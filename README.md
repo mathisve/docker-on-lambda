@@ -15,7 +15,7 @@ go mod tidy
 
 Ecr
 ```
-# optionally you cant create the container repository via the AWS CLI
+# optionally you can create the container repository via the AWS CLI
 aws ecr create-repository --repository-name time
 ```
 
