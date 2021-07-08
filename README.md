@@ -1,13 +1,24 @@
+![Golang](https://github.com/mathisve/docker-on-lambda/actions/workflows/go.yaml/badge.svg)
+![Docker](https://github.com/mathisve/docker-on-lambda/actions/workflows/docker.yaml//badge.svg)
+
 # docker-on-lambda
-This repository meant to be "enjoyed" alongside [this]() video (which hasn't been released yet.)
+This repository contains the project files of [this video](https://youtu.be/EYqFbRsh_RM).
+Read [this article](https://docs.aws.amazon.com/lambda/latest/dg/go-image.html) for a more in depth text-based tutorial.
 
 ## commands
 Golang
 ```
-# cannot be time (because that package already exits!)
+# module name cannot be time (because that package already exits!)
 go mod init lambda
 go mod tidy
 ```
+
+Ecr
+```
+# optionally you cant create the container repository via the AWS CLI
+aws ecr create-repository --repository-name time
+```
+
 
 Base docker image building and pushing
 ```
